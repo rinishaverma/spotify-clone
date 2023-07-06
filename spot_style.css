@@ -25,9 +25,7 @@ body {
     min-width: 80vw;
     cursor: pointer;
 }
-.songitem {
 
-}
 .bottom {
     position:sticky;
     height: 70px;

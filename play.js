@@ -3,6 +3,8 @@ let audioElement = new Audio('ari_lmh.mp3');
 let masterplay = document.getElementById("masterplay");
 let myprogressbar=document.getElementById("myprogressbar");
 let songindex=0;
+let container=document.getElementsByClassName("container");
+
 let songitem=Array.from(document.getElementsByClassName('songitem'));
 let song=[
 
@@ -55,15 +57,16 @@ const makeallplay=()=>{
         })
     };
     
-    
+
     
     
 
 Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
     element.addEventListener('click',(e)=>{
         makeallplay();
+        
         index=parseInt(e.target.id);
-        document.getElementsByClassName('container').style.backgroundImage.src = `body_${index+1}.png`;
+        
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
         audioElement.src=`${index+1}.mp3`;
@@ -71,6 +74,7 @@ Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
         audioElement.play();
         masterplay.classList.remove('fa-circle-play');
         masterplay.classList.add('fa-circle-pause');
+      
     })
 }
 
