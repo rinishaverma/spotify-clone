@@ -25,6 +25,9 @@ body {
     min-width: 80vw;
     cursor: pointer;
 }
+.songitem {
+
+}
 .bottom {
     position:sticky;
     height: 70px;
@@ -50,7 +53,7 @@ body {
     display: flex;
    
     border-radius: 34px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-weight: large;
     margin: 12px 0;
